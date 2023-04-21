@@ -1,0 +1,172 @@
+*{
+    margin: 0;
+    padding: 0;
+
+}
+body{
+    background-color: whitesmoke;
+    overflow: hidden;
+}
+.game{
+    background-image: url(bg.jpeg);
+    background-repeat: no-repeat;
+    background-size: 100vw 100vh;
+    width: 100%;
+    height: 100vh;
+    flex-wrap: wrap;
+
+}
+.car{
+    background-image: url(car.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 18rem;
+    height: 5rem;
+    position:absolute;
+    bottom: 0;
+    left: 12px;
+}
+.obstacle{
+    width: 13rem;
+    height: 9.5rem;;
+    background-image: url(dino.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    bottom: 0;
+    left: 90vw;
+
+}
+h2{
+    position: relative;
+    top: 90px;
+    font-size: 2rem;
+    font-weight: bold;
+    font-style: italic;
+    font-family: 'Ubuntu', sans-serif;
+    text-align: left;
+    left: 2vw;
+}
+
+/*.form{
+    background-image: url(peach.gif);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 14rem;
+    height: 12rem;
+    position: absolute;
+    
+} */
+
+.form{
+    width: 40vw;
+    height: 60vh;
+    position: absolute;
+    top: 20vh;
+    left: 30vw;
+    border-radius: 15px;
+    border: 2px solid black;
+}
+.peach{
+    height: 17rem;
+    
+}
+
+.name{
+    position: relative;
+    top: 10px;
+    font-size: 2rem;
+    font-weight: bold;
+    font-style: italic;
+    font-family: 'Ubuntu', sans-serif;
+    text-align: left;
+    left: 13vw;
+}
+
+.sub{
+    position: relative;
+    top: 10px;
+    font-size: 2rem;
+    font-weight: bold;
+    font-style: italic;
+    font-family: 'Ubuntu', sans-serif;
+    text-align: left;
+    left: 13vw;
+}
+
+.animateCar{
+    animation: car 0.6s linear; 
+}
+
+.obstacleDino{
+    animation: obstacleDino 5s linear infinite;
+}
+
+.gameover{
+    position: relative;
+    top: 300px;
+    font-size: 2rem;
+    font-weight: bold;
+    font-style: italic;
+    font-family: 'Ubuntu', sans-serif;
+    text-align: center;
+}
+
+#scorecont{
+    color: brown;
+    font-size: 1.5rem;
+    font-weight: bold;
+    position: absolute;
+    right: 45px;
+    top: 31px;
+    border: 4px solid black;
+    padding: 10px;
+    font-family: 'Ubuntu',sans-serif;
+    border-radius: 10px;
+   
+}
+
+@keyframes car {
+    0%{
+        bottom: 0;
+
+    }
+    50%{
+        bottom: 422px;
+
+    }
+    100%{
+        bottom: 0;
+
+    }
+}
+
+@keyframes obstacleDino {
+    0%{
+        left: 100vw;
+    }
+   
+    100%{
+        left: -10vw;
+    }
+}
+
+@media screen and (max-width: 950px){
+    .game{
+        flex-wrap: wrap;
+    }
+    .gameover{
+        font-size: 1.5rem;
+    }
+    #scorecont{
+        font-size: 1rem;
+    }
+    .car{
+        width: 8rem;
+        height: 2rem;
+    }
+    .obstacle{
+        width: 7rem;
+        height: 5.2rem;
+    }
+}
